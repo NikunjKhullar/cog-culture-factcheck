@@ -120,7 +120,33 @@ Open your browser at `http://localhost:8501`.
 
 ---
 
-## ☁️ Deployment to Streamlit Community Cloud (in 3 Minutes)
+## ☁️ Deployment Guides
+
+### Option A: 1-Click Deployment to Render (Recommended)
+
+This repository includes a pre-configured [`render.yaml`](./render.yaml) blueprint and [`Procfile`](./Procfile) for seamless deployment on [Render](https://render.com):
+
+1. **Sign in to Render**:
+   - Go to [dashboard.render.com](https://dashboard.render.com/) and sign in with your GitHub account.
+2. **Deploy with Blueprint**:
+   - Click **"New +"** in the top right ➔ Select **"Blueprint"**.
+   - Connect your GitHub repository: `NikunjKhullar/cog-culture-factcheck`.
+   - Render will automatically detect `render.yaml` with the configured Build and Start commands.
+   - Click **"Apply"**.
+3. **Manual Web Service (Alternative)**:
+   - Click **"New +"** ➔ **"Web Service"** ➔ Select `cog-culture-factcheck`.
+   - **Environment**: `Python 3`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --server.enableCORS false --server.enableXsrfProtection false`
+   - **Plan**: Select **Free**.
+   - Click **"Deploy Web Service"**.
+4. **Live URL**:
+   Your app will be live at:
+   `https://cogculture-factshield.onrender.com`
+
+---
+
+### Option B: Deployment to Streamlit Community Cloud (in 2 Minutes)
 
 The application is built specifically for **Streamlit Community Cloud**, fulfilling the mandatory deployment deliverable (`https://<your-app-name>.streamlit.app`):
 
