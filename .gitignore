@@ -8,3 +8,9 @@ venv/
 # OS specific
 .DS_Store
 Thumbs.db
+
+# Storage
+uploads/*
+!uploads/.gitkeep
+reports/*
+!reports/.gitkeep
