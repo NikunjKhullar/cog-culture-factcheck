@@ -5,9 +5,6 @@ __pycache__/
 venv/
 .env
 
-# Streamlit
-.streamlit/
-
 # OS specific
 .DS_Store
 Thumbs.db
