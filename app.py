@@ -9,7 +9,9 @@ import json
 import pandas as pd
 import streamlit as st
 from io import BytesIO
+import importlib
 import fact_checker
+importlib.reload(fact_checker)
 
 # Configure Streamlit Page
 st.set_page_config(
